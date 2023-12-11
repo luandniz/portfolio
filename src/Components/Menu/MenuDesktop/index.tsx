@@ -6,7 +6,7 @@ interface IMenuItem {
   status: boolean;
 }
 
-export const Menu = () => {
+export const MenuDesktop = () => {
   const [menu, setMenu] = useState([
     { title: "Sobre", path: "#about", status: false },
     { title: "Experiências", path: "#experiences", status: false },

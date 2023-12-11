@@ -5,13 +5,8 @@ import {
   projectsDesign,
 } from "../../Components/Data/experience";
 import { Reveal } from "../../Components/Motion/Reveal";
-import { RotatingComponent } from "../../Components/Motion/Rotation";
 
-interface IPortfolioProps {
-  theme: string;
-}
-
-export const Portfolio = ({ theme }: IPortfolioProps) => {
+export const Portfolio = () => {
   return (
     <div className="h-full pt-36 lg:pt-1 lg:w-1/2 ">
       <div className="space-y-4 text-gray mb-16 dark:text-slate-300" id="about">
@@ -74,7 +69,7 @@ export const Portfolio = ({ theme }: IPortfolioProps) => {
       </div>
       {/* EXPERIÊNCIAS */}
       <div
-        className="space-y-4 text-gray mb-16 dark:text-slate-100"
+        className="space-y-4 text-gray pt-8 lg:pt-20 dark:text-slate-100"
         id="experiences"
       >
         <Reveal>
@@ -86,7 +81,7 @@ export const Portfolio = ({ theme }: IPortfolioProps) => {
       </div>
       {/* PROJETOS */}
       <div
-        className="space-y-4 text-gray mb-16 dark:text-slate-100"
+        className="space-y-4 text-gray pt-8 lg:pt-20 dark:text-slate-100"
         id="projects"
       >
         <Reveal>
@@ -97,7 +92,7 @@ export const Portfolio = ({ theme }: IPortfolioProps) => {
         ))}
       </div>
       <div
-        className="space-y-4 text-gray mb-16 dark:text-slate-100"
+        className="space-y-4 text-gray pt-8 lg:pt-20 dark:text-slate-100"
         id="design"
       >
         <Reveal>
@@ -113,9 +108,6 @@ export const Portfolio = ({ theme }: IPortfolioProps) => {
           Code. Construído com React.js, TypeScript e Tailwind CSS. Implantado
           com Vercel. Todo o texto é definido na fonte Poppins .
         </p>
-        <div className="flex justify-end">
-          <RotatingComponent theme={theme} />
-        </div>
       </footer>
     </div>
   );

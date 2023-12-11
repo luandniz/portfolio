@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Menu } from "../Menu";
+import { MenuDesktop } from "../Menu/MenuDesktop";
 import { Reveal } from "../Motion/Reveal";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
@@ -36,7 +36,7 @@ export const Apresentation = () => {
           </nav>
         </Reveal>
         <div className="mt-8">
-          <Menu />
+          <MenuDesktop />
         </div>
       </div>
     </div>

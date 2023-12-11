@@ -9,7 +9,7 @@ import { Reveal } from "../../Components/Motion/Reveal";
 export const Portfolio = () => {
   return (
     <div className="h-full pt-36 lg:pt-1 lg:w-1/2 ">
-      <div className="space-y-4 text-gray mb-16 dark:text-slate-300" id="about">
+      <div className="space-y-4 text-gray mb-16 dark:text-slate-300">
         <Reveal>
           <h2 className="uppercase font-bold dark:text-slate-100">Sobre</h2>
         </Reveal>

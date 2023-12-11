@@ -14,6 +14,11 @@ export const MenuDesktop = () => {
     { title: "Design", path: "#design", status: false },
   ]);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log("clicou");
+  };
+
   const changeStatus = (clickedElement: IMenuItem) => {
     const updatedMenu = menu.map((element) => ({
       ...element,
@@ -31,7 +36,12 @@ export const MenuDesktop = () => {
             <a
               href={element.path}
               className="group flex items-center py-3 active"
-              onClick={() => changeStatus(element)}
+              onClick={() => {
+                changeStatus(element);
+                if (element.title === "Sobre") {
+                  handleScrollToTop();
+                }
+              }}
             >
               <span
                 className={`nav-indicator mr-4 h-px w-8 bg-gray dark:bg-slate-300 transition-all group-hover:w-16 group-hover:bg-blue-400 dark:group-hover:bg-teal-400 group-focus-visible:w-16 group-focus-visible:bg-blue-400 dark:group-focus-visible:bg-teal-400 motion-reduce:transition-none ${

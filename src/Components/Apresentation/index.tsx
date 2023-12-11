@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export const Apresentation = () => {
   return (
-    <div className="flex relative lg:w-1/2">
+    <div className="flex relative lg:w-1/2 ">
       {/* ------------------- apresentação */}
       <div className="w-full h-full flex flex-col justify-center z-10 lg:justify-start lg:fixed lg:w-[35%] xl:w-[26%]">
         <Reveal>

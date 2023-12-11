@@ -32,6 +32,11 @@ export const MenuMobile = () => {
     setMenu(updatedMenu);
   };
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log("clicou");
+  };
+
   return (
     <div className="h-16 w-[85%] bg-slate-300 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 rounded fixed bottom-2  flex items-center lg:invisible">
       <div className=" bg-slate-800 dark:bg-slate-300 flex w-full justify-around p rounded py-2 sm:py-3 mx-4">
@@ -39,7 +44,12 @@ export const MenuMobile = () => {
           <a
             href={element.path}
             key={index}
-            onClick={() => changeStatus(element)}
+            onClick={() => {
+              changeStatus(element);
+              if (element.title === "Sobre") {
+                handleScrollToTop();
+              }
+            }}
           >
             <element.icon
               className={`text-xl text-slate-300 dark:text-slate-800 font-bold hover:text-blue-400 dark:hover:text-blue-400 cursor-pointer visible sm:hidden ${
